@@ -78,7 +78,7 @@ export async function buildReferenceSnapshot(
       ...discovered,
       tools: discovered.tools.map((tool) => ({
         ...tool,
-        ...(server.id === "langfuse" && V4_ONLY_TOOL_NAMES.has(tool.name)
+        ...(server.id === "langfuse-cloud" && V4_ONLY_TOOL_NAMES.has(tool.name)
           ? { requiresV4: true }
           : {}),
       })),

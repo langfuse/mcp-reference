@@ -32,7 +32,7 @@ The runtime generator constructs `Authorization: Basic base64(LANGFUSE_PUBLIC_KE
 
 `mcp-reference.config.json` is the source of truth for public MCP servers, authentication requirements, and endpoint variants. The initial catalog includes:
 
-- `langfuse`: authenticated Langfuse MCP server, introspected from the Cloud EU endpoint and documented with EU, US, Japan, HIPAA, self-hosted, and local variants.
+- `langfuse-cloud`: authenticated Langfuse MCP server, introspected from the Cloud EU endpoint and documented with EU, US, Japan, HIPAA, self-hosted, and local variants.
 - `langfuse-docs`: unauthenticated Langfuse docs MCP server.
 
 All configured top-level servers are required for the default production runtime.
