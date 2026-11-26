@@ -11,8 +11,8 @@ const config = {
   description: "Runtime generated MCP reference.",
   servers: [
     {
-      id: "langfuse-cloud",
-      name: "Langfuse Cloud MCP",
+      id: "langfuse",
+      name: "Langfuse MCP server",
       url: "https://cloud.langfuse.com/api/public/mcp",
       auth: {
         type: "basic",
@@ -39,13 +39,13 @@ describe("buildReferenceArtifacts", () => {
       },
       tools: [
         {
-          name: server.id === "langfuse-cloud" ? "listObservations" : "search",
+          name: server.id === "langfuse" ? "listObservations" : "search",
           inputSchema: { type: "object" },
           exampleRequest: {
             jsonrpc: "2.0",
             method: "tools/call",
             params: {
-              name: server.id === "langfuse-cloud" ? "listObservations" : "search",
+              name: server.id === "langfuse" ? "listObservations" : "search",
               arguments: {},
             },
           },
@@ -73,7 +73,7 @@ describe("buildReferenceArtifacts", () => {
       sourceConfig: "mcp-reference.config.json",
     });
     expect(snapshot.servers.map((server) => server.id)).toEqual([
-      "langfuse-cloud",
+      "langfuse",
       "langfuse-docs",
     ]);
     expect(snapshot.servers[0].tools[0].requiresV4).toBe(true);

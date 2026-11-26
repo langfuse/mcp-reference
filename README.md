@@ -11,7 +11,7 @@ pnpm dev
 
 The default runtime discovery checks every configured server and fails if any required server cannot be initialized or introspected.
 
-For unauthenticated local work, run the app against only the public Docs MCP server:
+For unauthenticated local work, run the app against only the public Langfuse docs MCP server:
 
 ```bash
 MCP_REFERENCE_SERVER_IDS=langfuse-docs pnpm dev
@@ -19,7 +19,7 @@ MCP_REFERENCE_SERVER_IDS=langfuse-docs pnpm dev
 
 ## Runtime Credentials
 
-The authenticated Langfuse Cloud MCP server uses project-scoped Basic Auth during server-side discovery:
+The authenticated Langfuse MCP server uses project-scoped Basic Auth during server-side discovery:
 
 ```bash
 LANGFUSE_PUBLIC_KEY=pk-lf-your-public-key
@@ -32,8 +32,8 @@ The runtime generator constructs `Authorization: Basic base64(LANGFUSE_PUBLIC_KE
 
 `mcp-reference.config.json` is the source of truth for public MCP servers, authentication requirements, and endpoint variants. The initial catalog includes:
 
-- `langfuse-cloud`: authenticated Langfuse Cloud MCP server, introspected from the Cloud EU endpoint and documented with EU, US, Japan, HIPAA, self-hosted, and local variants.
-- `langfuse-docs`: unauthenticated Langfuse Docs MCP server.
+- `langfuse`: authenticated Langfuse MCP server, introspected from the Cloud EU endpoint and documented with EU, US, Japan, HIPAA, self-hosted, and local variants.
+- `langfuse-docs`: unauthenticated Langfuse docs MCP server.
 
 All configured top-level servers are required for the default production runtime.
 

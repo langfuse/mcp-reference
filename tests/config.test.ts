@@ -7,8 +7,8 @@ const validConfig = {
   description: "Langfuse MCP reference generated at runtime.",
   servers: [
     {
-      id: "langfuse-cloud",
-      name: "Langfuse Cloud MCP",
+      id: "langfuse",
+      name: "Langfuse MCP server",
       url: "https://cloud.langfuse.com/api/public/mcp",
       auth: {
         type: "basic",
@@ -71,7 +71,7 @@ describe("validateReferenceConfig", () => {
 
   it("fails when basic auth env vars are missing", () => {
     expect(() => validateReferenceConfig(validConfig, {})).toThrow(
-      "langfuse-cloud requires missing build environment variable(s)",
+      "langfuse requires missing build environment variable(s)",
     );
   });
 

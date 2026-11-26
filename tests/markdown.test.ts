@@ -34,8 +34,8 @@ const reference: GeneratedReference = {
   },
   servers: [
     {
-      id: "langfuse-cloud",
-      name: "Langfuse Cloud MCP",
+      id: "langfuse",
+      name: "Langfuse MCP server",
       description: "Cloud server",
       canonicalUrl: "https://cloud.langfuse.com/api/public/mcp",
       auth: {

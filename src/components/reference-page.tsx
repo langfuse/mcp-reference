@@ -15,7 +15,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { GeneratedReference, GeneratedServer, ToolReference } from "@/lib/types";
 
-const API_STABILITY_CALLOUT_SERVER_ID = "langfuse-cloud";
+const API_STABILITY_CALLOUT_SERVER_ID = "langfuse";
 
 interface ReferencePageProps {
   snapshot: GeneratedReference;

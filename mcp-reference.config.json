@@ -1,11 +1,11 @@
 {
   "title": "Langfuse MCP Servers",
-  "description": "Connect MCP clients to Langfuse Cloud for project-scoped prompt management and to Langfuse Docs for public documentation search and retrieval.",
+  "description": "Connect MCP clients to the Langfuse MCP server for evals, prompts, traces and metrics in a Langfuse project, and to the Langfuse docs MCP server for public documentation search and retrieval.",
   "servers": [
     {
-      "id": "langfuse-cloud",
-      "name": "Langfuse Cloud MCP",
-      "description": "Authenticated project-scoped MCP server for Langfuse Cloud projects.",
+      "id": "langfuse",
+      "name": "Langfuse MCP server",
+      "description": "Authenticated MCP server for a Langfuse project: evaluators, scores, datasets, experiments, annotation queues, prompts, observations and metrics.",
       "url": "https://cloud.langfuse.com/api/public/mcp",
       "auth": {
         "type": "basic",
@@ -41,7 +41,7 @@
     },
     {
       "id": "langfuse-docs",
-      "name": "Langfuse Docs MCP",
+      "name": "Langfuse docs MCP server",
       "description": "Unauthenticated MCP server for Langfuse documentation search and retrieval.",
       "url": "https://langfuse.com/api/mcp",
       "auth": {

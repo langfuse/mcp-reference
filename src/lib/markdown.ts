@@ -1,6 +1,6 @@
 import type { GeneratedReference, GeneratedServer, SetupSnippet, ToolReference } from "./types";
 
-const API_STABILITY_CALLOUT_SERVER_ID = "langfuse-cloud";
+const API_STABILITY_CALLOUT_SERVER_ID = "langfuse";
 const API_STABILITY_CALLOUT = [
   "> ⚠️ **API stability**:",
   "> This MCP server is self-describing. Clients should dynamically inspect available tools and schemas rather than assuming a static interface.",
